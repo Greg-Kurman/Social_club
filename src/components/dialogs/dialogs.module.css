@@ -1,0 +1,25 @@
+.dialogs_wrapp {
+    display: flex;
+}
+
+.names {
+    margin: 20px;
+    background-color: blueviolet;
+    padding: 20px;
+    color: black;
+}
+
+.item {
+    margin: 10px;
+
+}
+
+.dialogs_chat {
+
+    margin: 20px 100px;
+    
+}
+
+.active {
+    color: red;
+}
