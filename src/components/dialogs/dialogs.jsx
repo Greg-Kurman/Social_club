@@ -6,19 +6,30 @@ import DialogItem from "./dialogitem/dialogitem";
 
 
 
+let newMessage = React.createRef();
+
+let sendMessage =()=> {
+  let  text = newMessage.current.value;
+    alert(text)
+}
 
 
 
 const Dialogs =(props ) => {
 
+  
 
-    
+  
+
+  
+
+  
 
 
     let dialogElements = props.dialogsData.map( d => <DialogItem id={d.id} name={d.name}/>) ;
     let messageElements = props.messageData.map( m => <Message id={m.id} message={m.message}/>) ;
     
-
+      
     
 
   return (
@@ -33,7 +44,10 @@ const Dialogs =(props ) => {
         <div className={s.dialogs_chat}>
           <div>
              {messageElements}
+             <textarea ref={newMessage}></textarea>
+             <button onClick= {sendMessage} >отправить</button>
 
+             
            <br/>
           </div>
         </div>

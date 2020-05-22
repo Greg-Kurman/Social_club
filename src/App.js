@@ -9,7 +9,7 @@ import Settings from './components/Settings/settings';
 
 function App(props) {
   return (
-    <BrowserRouter>
+   
     <div className="app-warapper">
           <Header/>
           
@@ -18,8 +18,8 @@ function App(props) {
 
                 <Nav/>
                 <div>
-  <Route path='/dialogs' render = { () => <Dialogs dialogsData= {props.dialogsData} messageData= {props.messageData } /> } />
-                  <Route path='/profile' render = { () => <Profile postData={props.postData}/> } />
+                  <Route path='/dialogs' render = { () => <Dialogs dialogsData= {props.state.dialogsData} messageData= {props.state.messageData } /> } />
+                  <Route path='/profile' render = { () => <Profile postData={props.state.postData} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/> } />
                   <Route path='/settings' render = { () => <Settings/> } />
                 
                
@@ -30,7 +30,7 @@ function App(props) {
         
       </div>
     </div>
-    </BrowserRouter>
+    
   );
 }
 
